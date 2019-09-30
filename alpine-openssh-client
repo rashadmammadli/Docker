@@ -7,6 +7,6 @@ FROM alpine:latest
 MAINTAINER Rashad Mammadli <mammadli.reshad@gmail.com>
 
 # Install openssh-client.
-RUN \
-  apk --update add openssh-client && \
-  rm -rf /var/cache/apk/*
+RUN apk add --no-cache \
+    bash \
+    openssh-client
